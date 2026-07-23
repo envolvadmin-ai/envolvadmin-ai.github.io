@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Como solicitar a exclusão da sua conta e dados do app Envolv, aplicativo de medicina do esporte desenvolvido pela Envolv.">
+<title>Exclusão de conta e dados — Envolv</title>
+<style>
+  :root {
+    --bg: #0c1322;
+    --surface: #141d31;
+    --surface-2: #1a2540;
+    --border: #24314f;
+    --text: #e9eef7;
+    --muted: #9aa7bd;
+    --accent: #45d6c0;
+    --accent-strong: #6ae8d4;
+    --accent-ink: #062621;
+    --danger-soft: #f0b9a6;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    width: min(46rem, 100% - 2.5rem);
+    margin-inline: auto;
+  }
+
+  /* ---------- Header ---------- */
+  header {
+    border-bottom: 1px solid var(--border);
+    background:
+      radial-gradient(60rem 24rem at 50% -12rem, rgba(69, 214, 192, 0.10), transparent 65%),
+      var(--bg);
+    padding: 3.5rem 0 2.75rem;
+  }
+
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-weight: 800;
+    font-size: 1.35rem;
+    letter-spacing: -0.01em;
+  }
+
+  .brand-mark {
+    width: 2.1rem;
+    height: 2.1rem;
+    border-radius: 0.65rem;
+    background: var(--accent);
+    color: var(--accent-ink);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 900;
+  }
+
+  .ecg {
+    display: block;
+    width: 100%;
+    max-width: 22rem;
+    height: 2.25rem;
+    margin: 1.75rem 0 1.25rem;
+    color: var(--accent);
+    opacity: 0.9;
+  }
+
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--accent);
+  }
+
+  header h1 {
+    font-size: clamp(1.9rem, 5.5vw, 2.75rem);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    font-weight: 800;
+    margin-top: 0.4rem;
+  }
+
+  .lede {
+    color: var(--muted);
+    max-width: 38rem;
+    margin-top: 1rem;
+  }
+
+  .lede strong { color: var(--text); font-weight: 600; }
+
+  /* ---------- Main / sections ---------- */
+  main { padding: 2.5rem 0 3rem; }
+
+  section + section { margin-top: 3rem; }
+
+  h2 {
+    font-size: 1.35rem;
+    letter-spacing: -0.015em;
+    font-weight: 750;
+    margin-bottom: 1rem;
+  }
+
+  p + p { margin-top: 0.85rem; }
+
+  .muted { color: var(--muted); }
+
+  /* Steps */
+  ol.steps {
+    list-style: none;
+    counter-reset: passo;
+    display: grid;
+    gap: 0.9rem;
+    margin-top: 1.25rem;
+  }
+
+  ol.steps li {
+    counter-increment: passo;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 0.9rem;
+    padding: 1.15rem 1.25rem 1.15rem 4rem;
+    position: relative;
+  }
+
+  ol.steps li::before {
+    content: counter(passo);
+    position: absolute;
+    left: 1.15rem;
+    top: 1.15rem;
+    width: 1.9rem;
+    height: 1.9rem;
+    border-radius: 50%;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    color: var(--accent-strong);
+    font-weight: 800;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  a.mail-inline {
+    color: var(--accent-strong);
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(106, 232, 212, 0.45);
+    word-break: break-all;
+  }
+
+  a.mail-inline:hover,
+  a.mail-inline:focus-visible {
+    color: #fff;
+    border-bottom-color: var(--accent-strong);
+  }
+
+  /* Email highlight card */
+  .mail-card {
+    margin-top: 1.5rem;
+    background: linear-gradient(150deg, rgba(69, 214, 192, 0.14), rgba(69, 214, 192, 0.04));
+    border: 1px solid rgba(69, 214, 192, 0.4);
+    border-radius: 1rem;
+    padding: 1.4rem 1.5rem;
+  }
+
+  .mail-card .label {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 700;
+    color: var(--accent);
+  }
+
+  .mail-card a.mail-link {
+    display: inline-block;
+    margin-top: 0.35rem;
+    font-size: clamp(1.05rem, 4vw, 1.35rem);
+    font-weight: 750;
+    color: var(--accent-strong);
+    text-decoration: none;
+    border-bottom: 2px solid rgba(106, 232, 212, 0.45);
+    word-break: break-all;
+  }
+
+  .mail-card a.mail-link:hover,
+  .mail-card a.mail-link:focus-visible {
+    color: #fff;
+    border-bottom-color: var(--accent-strong);
+  }
+
+  .mail-card p.hint {
+    margin-top: 0.6rem;
+    font-size: 0.92rem;
+    color: var(--muted);
+  }
+
+  /* Data lists */
+  ul.data-list {
+    list-style: none;
+    display: grid;
+    gap: 0.6rem;
+    margin-top: 1rem;
+  }
+
+  ul.data-list li {
+    padding-left: 1.7rem;
+    position: relative;
+  }
+
+  ul.data-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.62em;
+    width: 0.55rem;
+    height: 0.55rem;
+    border-radius: 2px;
+    background: var(--accent);
+  }
+
+  ul.data-list.kept li::before {
+    background: transparent;
+    border: 2px solid var(--danger-soft);
+    width: 0.45rem;
+    height: 0.45rem;
+  }
+
+  .notice {
+    margin-top: 1.25rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 0.6rem;
+    padding: 1rem 1.2rem;
+    font-size: 0.97rem;
+    color: var(--muted);
+  }
+
+  .notice strong { color: var(--text); }
+
+  /* Prazo badge */
+  .deadline {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 0.9rem;
+    padding: 1rem 1.3rem;
+    margin-top: 0.5rem;
+  }
+
+  .deadline .num {
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--accent-strong);
+    line-height: 1;
+  }
+
+  .deadline .unit {
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+
+  /* ---------- Footer ---------- */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 2.25rem 0 3rem;
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+
+  footer a {
+    color: var(--accent-strong);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(106, 232, 212, 0.4);
+  }
+
+  footer a:hover,
+  footer a:focus-visible { color: #fff; border-bottom-color: var(--accent-strong); }
+
+  footer .updated { margin-top: 0.5rem; font-size: 0.88rem; }
+
+  a:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 3px;
+  }
+
+  @media (min-width: 40rem) {
+    header { padding: 4.5rem 0 3.25rem; }
+    main { padding: 3.25rem 0 4rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">E</span>
+      Envolv
+    </div>
+
+    <svg class="ecg" viewBox="0 0 320 36" fill="none" aria-hidden="true" preserveAspectRatio="xMinYMid meet">
+      <path d="M0 18 H90 L100 18 L108 6 L118 30 L126 12 L132 18 H200 L208 18 L214 10 L222 26 L228 18 H320"
+            stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+    </svg>
+
+    <p class="eyebrow">Privacidade e dados</p>
+    <h1>Exclusão de conta e dados</h1>
+    <p class="lede">
+      Esta página explica como solicitar a exclusão da sua conta e dos seus dados no
+      <strong>Envolv</strong>, aplicativo de medicina do esporte desenvolvido pela
+      <strong>Envolv</strong>. Você pode fazer a solicitação mesmo sem ter o app instalado.
+    </p>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <section aria-labelledby="como-solicitar">
+      <h2 id="como-solicitar">Como solicitar a exclusão</h2>
+      <p class="muted">A solicitação é feita exclusivamente por e-mail, em três passos:</p>
+
+      <ol class="steps">
+        <li>
+          Envie um e-mail para
+          <a class="mail-inline" href="mailto:contato@envolvapp.com.br?subject=Solicita%C3%A7%C3%A3o%20de%20exclus%C3%A3o%20de%20conta%20-%20Envolv">contato@envolvapp.com.br</a>
+          com o assunto <strong>"Solicitação de exclusão de conta - Envolv"</strong>.
+        </li>
+        <li>
+          No corpo do e-mail, informe o <strong>e-mail ou usuário cadastrado no app</strong>,
+          para que possamos localizar a sua conta.
+        </li>
+        <li>
+          Nossa equipe confirmará a sua identidade e processará a exclusão em até
+          <strong>30 dias</strong>, enviando a confirmação por e-mail.
+        </li>
+      </ol>
+
+      <div class="mail-card">
+        <p class="label">Canal de solicitação</p>
+        <a class="mail-link" href="mailto:contato@envolvapp.com.br?subject=Solicita%C3%A7%C3%A3o%20de%20exclus%C3%A3o%20de%20conta%20-%20Envolv">contato@envolvapp.com.br</a>
+        <p class="hint">O link já abre o e-mail com o assunto preenchido. Basta informar o seu e-mail ou usuário cadastrado no corpo da mensagem.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="dados-excluidos">
+      <h2 id="dados-excluidos">Quais dados são excluídos</h2>
+      <p class="muted">Ao concluir a solicitação, excluímos de forma definitiva:</p>
+      <ul class="data-list">
+        <li>Dados de perfil;</li>
+        <li>Credenciais de acesso;</li>
+        <li>Preferências;</li>
+        <li>Dados de uso do app que não estejam sujeitos a guarda legal.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="dados-mantidos">
+      <h2 id="dados-mantidos">Quais dados são mantidos e por quê</h2>
+      <p>
+        Dados de <strong>prontuário e registros clínicos de saúde</strong> são retidos por até
+        <strong>20 anos</strong>, conforme obrigação legal aplicável a registros médicos no Brasil
+        (Resolução CFM nº&nbsp;1.821/2007). Após esse período, ou quando não houver mais obrigação
+        legal de guarda, os dados são eliminados de forma definitiva.
+      </p>
+      <ul class="data-list kept">
+        <li>Prontuário e registros clínicos de saúde — retenção de até 20 anos.</li>
+      </ul>
+      <div class="notice">
+        <strong>Base legal:</strong> essa retenção atende à Lei Geral de Proteção de Dados —
+        LGPD (Lei nº&nbsp;13.709/2018), tendo como base legal o cumprimento de obrigação
+        legal/regulatória.
+      </div>
+    </section>
+
+    <section aria-labelledby="prazo">
+      <h2 id="prazo">Prazo</h2>
+      <div class="deadline">
+        <span class="num">30</span>
+        <span class="unit">dias — prazo máximo para processar a exclusão após a confirmação de identidade, com aviso de conclusão enviado por e-mail.</span>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>
+      Dúvidas sobre privacidade ou exclusão de dados? Fale com a gente:
+      <a href="mailto:contato@envolvapp.com.br">contato@envolvapp.com.br</a>
+    </p>
+    <p class="updated">Envolv · Última atualização: 23 de julho de 2026</p>
+  </div>
+</footer>
+
+</body>
+</html>
