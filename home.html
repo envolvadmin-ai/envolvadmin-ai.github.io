@@ -7,7 +7,7 @@
 <meta name="description" content="Envolv — aplicativo de medicina do esporte que conecta clínicas, equipes de cuidado e atletas: prontuário, avaliações, agenda, exames e evolução do desempenho.">
 <title>Envolv — Medicina do esporte na palma da mão</title>
 <link rel="icon" href="/img/logo.png?v=3" type="image/png">
-<link rel="stylesheet" href="/css/site.css">
+<link rel="stylesheet" href="/css/site.css?v=5">
 </head>
 <body>
 
@@ -31,7 +31,7 @@
 
 <main>
   <section class="hero" aria-labelledby="hero-title">
-    <div class="wrap">
+    <div class="wrap hero-inner">
       <span class="badge"><span class="dot" aria-hidden="true"></span> App de medicina do esporte</span>
       <h1 id="hero-title">Cuidado clínico e desempenho<br><span class="accent">no mesmo lugar</span></h1>
       <p class="lede">
@@ -39,6 +39,16 @@
         avaliações, agenda, exames e evolução do desempenho ficam organizados
         para quem cuida — e acessíveis para quem treina.
       </p>
+      <div class="hero-rotate" data-rotator aria-live="polite">
+        <span class="hero-rotate-label">No app</span>
+        <span class="hero-rotate-viewport">
+          <span class="hero-rotate-item is-on">Home do atleta</span>
+          <span class="hero-rotate-item">Gerenciador da clínica</span>
+          <span class="hero-rotate-item">Prontuário clínico</span>
+          <span class="hero-rotate-item">Bioimpedância</span>
+          <span class="hero-rotate-item">Agenda e exames</span>
+        </span>
+      </div>
       <svg class="ecg" viewBox="0 0 480 44" fill="none" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
         <path d="M0 22 H130 L142 22 L152 7 L164 37 L174 14 L182 22 H290 L300 22 L308 12 L318 32 L326 22 H480"
               stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
@@ -50,15 +60,21 @@
     </div>
   </section>
 
-  <section class="section" aria-labelledby="usabilidade">
+  <section class="section center" aria-labelledby="usabilidade">
     <div class="wrap">
       <p class="eyebrow">Usabilidade</p>
       <h2 id="usabilidade">O app como o atleta e a equipe o usam</h2>
       <p class="section-lead">
-        Telas no visual do Envolv Health: a home do atleta, o gerenciador da
-        clínica e o prontuário. O fluxo do dia a dia — não um cartaz genérico.
+        Telas no visual do Envolv Health: home do atleta, gerenciador da clínica
+        e prontuário. O fluxo do dia a dia — não um cartaz genérico.
       </p>
-      <div class="phone-gallery">
+      <div class="phone-stage" data-carousel>
+        <div class="phone-stage-frame">
+          <button class="carousel-btn" type="button" data-carousel-prev aria-label="Tela anterior">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <div class="phone-stage-viewport">
+            <div class="phone-stage-track">
         <figure>
           <div class="phone-app" aria-hidden="true">
             <div class="ui">
@@ -159,11 +175,65 @@
             Consulta, exame e composição corporal no histórico do mesmo atleta.
           </figcaption>
         </figure>
+
+        <figure>
+          <div class="phone-app" aria-hidden="true">
+            <div class="ui">
+              <div class="ui-status"><span>9:41</span><span>5G</span></div>
+              <div class="ui-header">
+                <p class="ui-date">Última avaliação · 4 mar</p>
+                <p class="ui-hi">Bioimpedância</p>
+              </div>
+              <div class="ui-body">
+                <div class="ui-row"><span>Gordura<small>meta da temporada</small></span><em>18,4%</em></div>
+                <div class="ui-row"><span>Massa magra</span><em>62,1 kg</em></div>
+                <div class="ui-row"><span>IMC</span><em>22,8</em></div>
+                <div class="ui-row"><span>Água corporal</span><em>38,2 L</em></div>
+                <div class="ui-btn">Abrir laudo PDF</div>
+              </div>
+              <div class="ui-tabbar"><span>Home</span><span class="on">Exames</span><span>Equipe</span><span>Mais</span></div>
+            </div>
+          </div>
+          <figcaption>
+            <strong>Bioimpedância</strong>
+            Composição corporal no histórico, sem redigitar a planilha da balança.
+          </figcaption>
+        </figure>
+
+        <figure>
+          <div class="phone-app" aria-hidden="true">
+            <div class="ui">
+              <div class="ui-status"><span>9:41</span><span>5G</span></div>
+              <div class="ui-header doctor">
+                <p class="ui-date">Março · Performance</p>
+                <p class="ui-hi">Agenda</p>
+              </div>
+              <div class="ui-body">
+                <div class="ui-row"><span>Ter 17 · 09:00<small>Retorno clínico · sala 2</small></span><em>Ana</em></div>
+                <div class="ui-row"><span>Qui 19 · 14:30<small>Avaliação nutricional</small></span><em>Rafael</em></div>
+                <div class="ui-row"><span>Sáb 21 · 08:00<small>Bioimpedância · laboratório</small></span><em>Marina</em></div>
+                <div class="ui-btn doctor">Novo agendamento</div>
+              </div>
+              <div class="ui-tabbar doctor"><span>Pacientes</span><span class="on">Agenda</span><span>Equipe</span><span>Mais</span></div>
+            </div>
+          </div>
+          <figcaption>
+            <strong>Agenda da clínica</strong>
+            Consultas com data e local — a secretaria agenda sem abrir o prontuário.
+          </figcaption>
+        </figure>
+            </div>
+          </div>
+          <button class="carousel-btn" type="button" data-carousel-next aria-label="Próxima tela">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+        <div class="carousel-dots" data-carousel-dots></div>
       </div>
     </div>
   </section>
 
-  <section class="section" aria-labelledby="para-quem">
+  <section class="section center" aria-labelledby="para-quem">
     <div class="wrap">
       <p class="eyebrow">Para quem é</p>
       <h2 id="para-quem">Um workspace para a clínica, a equipe e o atleta</h2>
@@ -172,8 +242,8 @@
         e sistemas genéricos. O Envolv reúne o acompanhamento contínuo num único
         aplicativo, com papéis claros para cada pessoa da equipe.
       </p>
-      <div class="grid grid-3">
-        <article class="card audience-card">
+      <div class="grid grid-3" data-spotlight>
+        <article class="card audience-card is-on">
           <p class="tag">Clínica</p>
           <h3>Gestão da carteira</h3>
           <p>Pacientes, vínculos, agenda e conteúdo da clínica em um gerenciador. Quem lidera a equipe decide quem entra e o que cada profissional pode ver.</p>
@@ -192,11 +262,17 @@
     </div>
   </section>
 
-  <section class="section" aria-labelledby="features-title">
+  <section class="section center" aria-labelledby="features-title">
     <div class="wrap">
       <p class="eyebrow">O que o Envolv faz</p>
       <h2 id="features-title">Do prontuário à evolução, sem perder o fio</h2>
-      <div class="grid grid-3">
+      <div class="card-stage" data-card-carousel>
+        <div class="card-stage-frame">
+          <button class="carousel-btn" type="button" data-card-prev aria-label="Recursos anteriores">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <div class="card-stage-viewport">
+            <div class="card-stage-track" data-card-track>
         <article class="card">
           <div class="icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-7 4 14 2-7h6"/></svg>
@@ -239,15 +315,22 @@
           <h3>Dados protegidos</h3>
           <p>Dados de saúde tratados com consentimento, guarda de prontuário conforme a legislação brasileira e canal claro para exclusão de conta.</p>
         </article>
+            </div>
+          </div>
+          <button class="carousel-btn" type="button" data-card-next aria-label="Próximos recursos">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+        <div class="carousel-dots" data-card-dots></div>
       </div>
     </div>
   </section>
 
-  <section class="section" aria-labelledby="como-funciona">
+  <section class="section center" aria-labelledby="como-funciona">
     <div class="wrap">
       <p class="eyebrow">Como funciona</p>
       <h2 id="como-funciona">Vínculo, prontuário e acompanhamento contínuo</h2>
-      <ol class="steps flow-steps">
+      <ol class="steps flow-steps" data-steps>
         <li>
           <h3>A clínica forma a equipe</h3>
           <p>Profissionais entram na clínica com papéis definidos: médico, nutricionista, personal trainer, enfermagem, administração ou secretaria. Cada um vê o que o próprio papel permite.</p>
@@ -264,14 +347,38 @@
     </div>
   </section>
 
-  <section class="section center" aria-labelledby="stores-title">
+  <section class="section center cta-banner" aria-labelledby="stores-title">
     <div class="wrap">
       <p class="eyebrow">Disponibilidade</p>
       <h2 id="stores-title">App Store e Google Play</h2>
       <p class="section-lead">O Envolv está disponível para iOS e Android. Dúvidas sobre cadastro, vínculo ou exclusão de conta: fale conosco por e-mail ou telefone.</p>
+      <div class="store-pills" aria-hidden="true">
+        <span class="store-pill is-on">iOS · App Store</span>
+        <span class="store-pill">Android · Google Play</span>
+      </div>
       <div class="cta-row">
         <a class="cta" href="/suporte.html">Fale conosco</a>
         <a class="cta-secondary" href="https://www.privacypolicies.com/live/5a5e5d6c-40be-46a4-ab0d-0eae4950a81a" target="_blank" rel="noopener noreferrer">Política de privacidade</a>
+      </div>
+    </div>
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>Prontuário clínico</span>
+        <span>Bioimpedância</span>
+        <span>Agenda</span>
+        <span>Exames</span>
+        <span>Equipes</span>
+        <span>Treino</span>
+        <span>Alimentação</span>
+        <span>Vínculo</span>
+        <span>Prontuário clínico</span>
+        <span>Bioimpedância</span>
+        <span>Agenda</span>
+        <span>Exames</span>
+        <span>Equipes</span>
+        <span>Treino</span>
+        <span>Alimentação</span>
+        <span>Vínculo</span>
       </div>
     </div>
   </section>
@@ -309,6 +416,6 @@
   </div>
 </footer>
 
-<script src="/js/nav.js"></script>
+<script src="/js/nav.js?v=4"></script>
 </body>
 </html>
