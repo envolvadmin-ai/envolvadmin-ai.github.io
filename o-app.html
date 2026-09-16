@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="O que o app Envolv faz: prontuário clínico, avaliações e bioimpedância, agenda, exames, equipes de cuidado e evolução do desempenho.">
+<title>O aplicativo — Envolv</title>
+<link rel="icon" href="/img/logo.png?v=3" type="image/png">
+<link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap topbar">
+    <a class="brand" href="/">
+      <img class="brand-logo" src="/img/logo.png?v=3" alt="" width="40" height="40">
+      Envolv
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Principal">
+      <a href="/">Início</a>
+      <a href="/o-app.html" aria-current="page">O app</a>
+      <a href="/profissionais.html">Profissionais</a>
+      <a href="/atletas.html">Atletas</a>
+      <a href="/sobre.html">Sobre</a>
+      <a href="/suporte.html">Suporte</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero" aria-labelledby="page-title">
+    <div class="wrap">
+      <p class="eyebrow">O aplicativo</p>
+      <h1 id="page-title">Partes do Envolv, na prática</h1>
+      <p class="lede">
+        O Envolv Health é o app de medicina do esporte da Envolv. Há um gerenciador
+        para a clínica e a equipe de cuidado, e uma home para o atleta. Os módulos
+        abaixo são as telas que a equipe usa no dia a dia — escolha uma aba para ver
+        o que cada parte faz.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" style="border-top:0; padding-top:0" aria-labelledby="modulos">
+    <div class="wrap">
+      <h2 id="modulos" class="visually-hidden" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Módulos do aplicativo</h2>
+
+      <div class="module-tabs">
+        <input type="radio" name="module" id="mod-prontuario" checked>
+        <input type="radio" name="module" id="mod-avaliacoes">
+        <input type="radio" name="module" id="mod-agenda">
+        <input type="radio" name="module" id="mod-exames">
+        <input type="radio" name="module" id="mod-equipes">
+        <input type="radio" name="module" id="mod-evolucao">
+
+        <div class="tab-labels" role="tablist" aria-label="Módulos do app">
+          <label for="mod-prontuario">Prontuário clínico</label>
+          <label for="mod-avaliacoes">Avaliações e bioimpedância</label>
+          <label for="mod-agenda">Agenda e consultas</label>
+          <label for="mod-exames">Exames e documentos</label>
+          <label for="mod-equipes">Equipes e clínicas</label>
+          <label for="mod-evolucao">Evolução e desempenho</label>
+        </div>
+
+        <div class="tab-panels">
+          <article class="tab-panel" id="panel-prontuario">
+            <div class="tab-copy">
+              <h3>Prontuário clínico</h3>
+              <p>
+                O prontuário reúne o histórico do atleta para a equipe vinculada:
+                consultas, exames, aplicações, procedimentos e relatórios. Quem
+                atende (médico, nutricionista, personal trainer ou enfermagem)
+                lê e escreve no mesmo registro — não em cadernos paralelos.
+              </p>
+              <p>
+                O acesso não é aberto a toda a plataforma. Só entra no prontuário
+                quem pertence à equipe de cuidado daquele atleta, com vínculo
+                ativo. A secretaria vê agenda e lista de pacientes, mas não o
+                conteúdo clínico.
+              </p>
+              <ul>
+                <li>Registros de consulta, exame, aplicação e relatório</li>
+                <li>Perfil do atleta (objetivos, condições declaradas, plano de acompanhamento)</li>
+                <li>Histórico anterior ao convite, quando o profissional entra na equipe</li>
+              </ul>
+            </div>
+            <div class="phone-app" aria-hidden="true">
+              <div class="ui">
+                <div class="ui-status"><span>9:41</span><span>5G</span></div>
+                <div class="ui-header doctor">
+                  <p class="ui-date">Ana Souza · Performance</p>
+                  <p class="ui-hi">Prontuário</p>
+                </div>
+                <div class="ui-body">
+                  <div class="ui-pills">
+                    <span class="ui-pill on">Registros</span>
+                    <span class="ui-pill">Bio</span>
+                    <span class="ui-pill">Treino</span>
+                  </div>
+                  <div class="ui-row"><span>Consulta de retorno<small>12 mar · Medicina do esporte</small></span><em>Ver</em></div>
+                  <div class="ui-row"><span>Exame laboratorial<small>PDF · 28 fev</small></span><em>Ver</em></div>
+                  <div class="ui-row"><span>Relatório de avaliação<small>10 fev · fisiologia</small></span><em>Ver</em></div>
+                  <div class="ui-btn doctor">Novo registro</div>
+                </div>
+                <div class="ui-tabbar doctor"><span class="on">Pacientes</span><span>Agenda</span><span>Equipe</span><span>Mais</span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="tab-panel" id="panel-avaliacoes">
+            <div class="tab-copy">
+              <h3>Avaliações e bioimpedância</h3>
+              <p>
+                Avaliações físicas e clínicas entram no mesmo histórico. A
+                bioimpedância registra composição corporal: peso, percentual de
+                gordura, massa magra, IMC, água corporal, gordura visceral, taxa
+                metabólica basal e análise segmentar.
+              </p>
+              <p>
+                Relatórios em PDF ficam vinculados ao atleta. Quando a balança
+                envia um identificador de laudo, o Envolv importa os resultados
+                para o registro — a equipe não precisa redigitar a planilha da
+                avaliação.
+              </p>
+              <ul>
+                <li>Lançamento manual ou importação do laudo de bioimpedância</li>
+                <li>Histórico de avaliações visível para a equipe e, quando liberado, para o atleta</li>
+                <li>Base para acompanhar composição corporal ao longo da temporada</li>
+              </ul>
+            </div>
+            <div class="phone-app" aria-hidden="true">
+              <div class="ui">
+                <div class="ui-status"><span>9:41</span><span>5G</span></div>
+                <div class="ui-header">
+                  <p class="ui-date">Última avaliação · 4 mar</p>
+                  <p class="ui-hi">Bioimpedância</p>
+                </div>
+                <div class="ui-body">
+                  <div class="ui-row"><span>Gordura<small>meta da temporada</small></span><em>18,4%</em></div>
+                  <div class="ui-row"><span>Massa magra</span><em>62,1 kg</em></div>
+                  <div class="ui-row"><span>IMC</span><em>22,8</em></div>
+                  <div class="ui-row"><span>Água corporal</span><em>38,2 L</em></div>
+                  <div class="ui-btn">Abrir laudo PDF</div>
+                </div>
+                <div class="ui-tabbar"><span>Home</span><span class="on">Exames</span><span>Equipe</span><span>Mais</span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="tab-panel" id="panel-agenda">
+            <div class="tab-copy">
+              <h3>Agenda e consultas</h3>
+              <p>
+                A clínica marca consultas e procedimentos com data, local e
+                anotações. O atleta vê os compromissos na própria home, no
+                módulo de agenda — desde que a clínica tenha liberado esse
+                módulo para o acompanhamento.
+              </p>
+              <p>
+                Secretaria e administração usam a agenda da clínica sem acessar
+                o prontuário. Quem atende registra a consulta no histórico
+                clínico depois do encontro, ligando o agendamento à conduta.
+              </p>
+              <ul>
+                <li>Agenda da clínica e da equipe</li>
+                <li>Consultas visíveis ao atleta no app</li>
+                <li>Anotações de local e contexto do atendimento</li>
+              </ul>
+            </div>
+            <div class="phone-app" aria-hidden="true">
+              <div class="ui">
+                <div class="ui-status"><span>9:41</span><span>5G</span></div>
+                <div class="ui-header doctor">
+                  <p class="ui-date">Março · Performance</p>
+                  <p class="ui-hi">Agenda</p>
+                </div>
+                <div class="ui-body">
+                  <div class="ui-row"><span>Ter 17 · 09:00<small>Retorno clínico · sala 2</small></span><em>Ana</em></div>
+                  <div class="ui-row"><span>Qui 19 · 14:30<small>Avaliação nutricional</small></span><em>Rafael</em></div>
+                  <div class="ui-row"><span>Sáb 21 · 08:00<small>Bioimpedância · laboratório</small></span><em>Marina</em></div>
+                  <div class="ui-btn doctor">Novo agendamento</div>
+                </div>
+                <div class="ui-tabbar doctor"><span>Pacientes</span><span class="on">Agenda</span><span>Equipe</span><span>Mais</span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="tab-panel" id="panel-exames">
+            <div class="tab-copy">
+              <h3>Exames e documentos</h3>
+              <p>
+                Exames e relatórios em PDF ficam armazenados em nuvem e
+                associados ao registro clínico do atleta. A equipe consulta o
+                arquivo no contexto da consulta — não num drive separado.
+              </p>
+              <p>
+                No app do atleta, o módulo de exames e o de procedimentos
+                mostram o histórico que a clínica registrou. A liberação é por
+                módulo: a clínica define se aquele atleta vê exames, agenda,
+                treinos, alimentação ou conteúdo educativo.
+              </p>
+              <ul>
+                <li>PDFs de exames e laudos no prontuário</li>
+                <li>Procedimentos e aplicações no histórico</li>
+                <li>Acesso do atleta apenas aos módulos concedidos</li>
+              </ul>
+            </div>
+            <div class="phone-app" aria-hidden="true">
+              <div class="ui">
+                <div class="ui-status"><span>9:41</span><span>5G</span></div>
+                <div class="ui-header">
+                  <p class="ui-date">Seus documentos</p>
+                  <p class="ui-hi">Exames</p>
+                </div>
+                <div class="ui-body">
+                  <div class="ui-row"><span>Hemograma completo<small>PDF · 28 fev · 1,2 MB</small></span><em>Abrir</em></div>
+                  <div class="ui-row"><span>Laudo de bioimpedância<small>PDF · 4 mar</small></span><em>Abrir</em></div>
+                  <div class="ui-row"><span>Relatório de retorno<small>12 mar · equipe clínica</small></span><em>Abrir</em></div>
+                </div>
+                <div class="ui-tabbar"><span>Home</span><span class="on">Exames</span><span>Equipe</span><span>Mais</span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="tab-panel" id="panel-equipes">
+            <div class="tab-copy">
+              <h3>Equipes e clínicas</h3>
+              <p>
+                O atleta não fica “solto” na plataforma. Ele entra numa
+                <strong>equipe de cuidado</strong> de uma clínica, liderada por
+                um profissional. Pedidos de vínculo passam por quem lidera a
+                equipe: aceitar alguém dá acesso imediato e retroativo ao
+                prontuário daquela carteira.
+              </p>
+              <p>
+                No app, o atleta vê clínica, líder e membros em “Minha equipe”,
+                pode solicitar entrada e pode sair. A clínica gerencia membros,
+                grupos e o que cada papel enxerga — prontuário, feed, agenda ou
+                só a lista de pacientes.
+              </p>
+              <ul>
+                <li>Clínica com uma ou mais equipes de cuidado</li>
+                <li>Aceite de vínculo pelo líder da equipe</li>
+                <li>Papéis: médico, nutricionista, personal, enfermagem, admin, secretaria</li>
+              </ul>
+            </div>
+            <div class="phone-app" aria-hidden="true">
+              <div class="ui">
+                <div class="ui-status"><span>9:41</span><span>5G</span></div>
+                <div class="ui-header">
+                  <p class="ui-date">Clínica Envolv</p>
+                  <p class="ui-hi">Minha equipe</p>
+                </div>
+                <div class="ui-body">
+                  <div class="ui-row">
+                    <div class="ui-patient">
+                      <span class="ui-avatar">HC</span>
+                      <span>Dra. Helena Costa<small>Líder · Medicina do esporte</small></span>
+                    </div>
+                  </div>
+                  <div class="ui-row">
+                    <div class="ui-patient">
+                      <span class="ui-avatar">RL</span>
+                      <span>Rafael Lima<small>Nutricionista · CRN</small></span>
+                    </div>
+                  </div>
+                  <div class="ui-row">
+                    <div class="ui-patient">
+                      <span class="ui-avatar">MD</span>
+                      <span>Mariana Dias<small>Personal trainer · CREF</small></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="ui-tabbar"><span>Home</span><span class="on">Equipe</span><span>Feed</span><span>Mais</span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="tab-panel" id="panel-evolucao">
+            <div class="tab-copy">
+              <h3>Evolução e desempenho</h3>
+              <p>
+                O acompanhamento não termina na consulta. A equipe prescreve
+                treinos e plano alimentar; o atleta registra a execução das
+                séries e o que comeu no dia. Check-in e gamificação mostram o
+                hábito da equipe — não só o resultado isolado de um exame.
+              </p>
+              <p>
+                Composição corporal, treinos feitos e registros clínicos
+                convivem no mesmo atleta. A decisão da equipe deixa de depender
+                de print de WhatsApp ou de planilha desatualizada.
+              </p>
+              <ul>
+                <li>Treinos prescritos e registro de carga, repetições e duração</li>
+                <li>Plano alimentar em PDF e diário de refeições do atleta</li>
+                <li>Conteúdo da equipe (e-books e avisos) e ferramentas de bem-estar</li>
+              </ul>
+            </div>
+            <div class="phone-app" aria-hidden="true">
+              <div class="ui">
+                <div class="ui-status"><span>9:41</span><span>5G</span></div>
+                <div class="ui-header">
+                  <p class="ui-date">Últimos 30 dias</p>
+                  <p class="ui-hi">Evolução</p>
+                </div>
+                <div class="ui-body">
+                  <div class="ui-action">
+                    <strong>Treino de hoje</strong>
+                    <span>Full body · 8 exercícios</span>
+                    <div class="ui-btn">Registrar sessão</div>
+                  </div>
+                  <div class="ui-row"><span>Check-in da semana<small>5 de 7 dias</small></span><em>Hábito</em></div>
+                  <div class="ui-row"><span>Plano alimentar<small>PDF vigente</small></span><em>Abrir</em></div>
+                </div>
+                <div class="ui-tabbar"><span class="on">Home</span><span>Equipe</span><span>Feed</span><span>Mais</span></div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="dois-lados">
+    <div class="wrap">
+      <p class="eyebrow">Dois lados do mesmo app</p>
+      <h2 id="dois-lados">Gerenciador para quem cuida, home para quem treina</h2>
+      <div class="grid grid-2">
+        <article class="card">
+          <h3>Profissionais</h3>
+          <p>Lista de pacientes, prontuário, bioimpedância, agenda, conteúdo, vínculos e métricas da equipe. O que cada pessoa vê depende do papel e das permissões da clínica.</p>
+          <p><a href="/profissionais.html">Como a equipe usa o Envolv</a></p>
+        </article>
+        <article class="card">
+          <h3>Atletas</h3>
+          <p>Home com os módulos liberados: exames, consultas, equipe, treinos, alimentação, feed e ferramentas de bem-estar. O atleta acompanha o próprio cuidado, não um prontuário genérico.</p>
+          <p><a href="/atletas.html">O que o atleta vê no app</a></p>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h2>Envolv</h2>
+        <p>ENVOLV DESENVOLVIMENTO DE SOFTWAR LTDA<br>CNPJ 68.533.687/0001-64</p>
+        <p style="margin-top:0.6rem">Rua Doutor Pedrosa, nº 320, apto. 403<br>Centro, Curitiba/PR, CEP 80.420-120</p>
+      </div>
+      <div>
+        <h2>Navegação</h2>
+        <ul>
+          <li><a href="/o-app.html">O aplicativo</a></li>
+          <li><a href="/profissionais.html">Para profissionais</a></li>
+          <li><a href="/atletas.html">Para atletas</a></li>
+          <li><a href="/sobre.html">Sobre a empresa</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Contato e dados</h2>
+        <ul>
+          <li><a href="mailto:suportemain@envolvapp.com.br">suportemain@envolvapp.com.br</a></li>
+          <li><a href="tel:+5541997448143">(41) 99744-8143</a></li>
+          <li><a href="/suporte.html">Contato</a></li>
+          <li><a href="https://www.privacypolicies.com/live/5a5e5d6c-40be-46a4-ab0d-0eae4950a81a" target="_blank" rel="noopener noreferrer">Política de privacidade</a></li>
+          <li><a href="/exclusao-de-conta.html">Exclusão de conta e dados</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="fine">Envolv Health · Medicina do esporte · Curitiba/PR</p>
+  </div>
+</footer>
+
+<script src="/js/nav.js"></script>
+</body>
+</html>
