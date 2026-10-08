@@ -325,6 +325,7 @@ img { max-width: 100%; display: block; }
   .hero-inner > *:nth-child(4) { animation-delay: 0.3s; }
   .hero-inner > *:nth-child(5) { animation-delay: 0.38s; }
   .hero-inner > *:nth-child(6) { animation-delay: 0.46s; }
+  .hero-inner > *:nth-child(7) { animation-delay: 0.54s; }
   @keyframes rise {
     from { opacity: 0; transform: translateY(1.1rem); }
     to { opacity: 1; transform: none; }
@@ -332,21 +333,64 @@ img { max-width: 100%; display: block; }
 }
 
 .ecg {
+  position: relative;
   display: block;
-  width: min(30rem, 90%);
-  height: 3rem;
-  margin: 2rem auto 0;
-  color: var(--accent);
+  width: min(42rem, 94%);
+  aspect-ratio: 10 / 1.15;
+  margin: 1.35rem auto 0;
+  overflow: hidden;
+  container-type: inline-size;
+  color: #8ff8ea;
+}
+
+.ecg-draw {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.ecg svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100cqi;
+  height: 100%;
+  display: block;
+}
+
+.ecg-halo {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 6;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  opacity: 0.55;
+  filter: blur(2px);
+}
+
+.ecg-core {
+  fill: none;
+  stroke: #e9fffa;
+  stroke-width: 1.7;
+  stroke-linejoin: round;
+  stroke-linecap: round;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .ecg path {
-    stroke-dasharray: 700;
-    stroke-dashoffset: 700;
-    animation: draw 2.4s ease-out 0.3s forwards;
+  .ecg-draw {
+    width: 0;
+    animation: ecg-draw 4s linear infinite;
   }
-  @keyframes draw { to { stroke-dashoffset: 0; } }
+  @keyframes ecg-draw {
+    0% { width: 0; opacity: 1; }
+    88% { width: 100%; opacity: 1; }
+    100% { width: 100%; opacity: 0; }
+  }
 }
+
 
 .cta-row {
   margin-top: 2rem;
@@ -386,6 +430,81 @@ img { max-width: 100%; display: block; }
   border-color: var(--accent);
   color: var(--accent-strong);
 }
+
+.store-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 1.15rem;
+  align-items: center;
+}
+
+.hero .store-badges,
+.cta-banner .store-badges {
+  justify-content: center;
+}
+
+.store-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-height: 3.15rem;
+  padding: 0.4rem 1rem 0.4rem 0.75rem;
+  border-radius: 0.7rem;
+  background: #05080f;
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  line-height: 1.05;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22);
+}
+
+.store-badge:hover,
+.store-badge:focus-visible {
+  border-color: var(--accent);
+  color: #fff;
+  background: #0b1220;
+}
+
+.store-badge svg {
+  width: 1.55rem;
+  height: 1.55rem;
+  flex: none;
+}
+
+.store-badge span {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.store-badge small {
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.store-badge strong {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+
+.site-footer a.store-badge {
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.site-footer a.store-badge:hover,
+.site-footer a.store-badge:focus-visible {
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.footer-stores { margin-top: 1.6rem; }
 
 /* ---------- Sections ---------- */
 .section {
@@ -1555,7 +1674,6 @@ a.mail-inline:focus-visible {
 .cta-banner {
   position: relative;
   overflow: hidden;
-  padding-bottom: 0;
   background:
     radial-gradient(46rem 18rem at 50% 120%, rgba(69, 214, 192, 0.14), transparent 70%);
 }
@@ -1583,35 +1701,6 @@ a.mail-inline:focus-visible {
   background: var(--accent);
   color: var(--accent-ink);
   border-color: var(--accent);
-}
-
-.cta-banner .cta-row { margin-bottom: 2.4rem; }
-
-.ticker {
-  overflow: hidden;
-  border-top: 1px solid var(--border);
-  padding: 0.9rem 0;
-  mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
-}
-
-.ticker-track {
-  display: flex;
-  gap: 2.4rem;
-  width: max-content;
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--accent);
-}
-
-.ticker-track span { white-space: nowrap; }
-
-@media (prefers-reduced-motion: no-preference) {
-  .ticker-track { animation: ticker 32s linear infinite; }
-  @keyframes ticker {
-    to { transform: translateX(-50%); }
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

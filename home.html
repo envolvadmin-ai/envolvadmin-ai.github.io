@@ -7,7 +7,7 @@
 <meta name="description" content="Envolv — aplicativo de medicina do esporte que conecta clínicas, equipes de cuidado e atletas: prontuário, avaliações, agenda, exames e evolução do desempenho.">
 <title>Envolv — Medicina do esporte na palma da mão</title>
 <link rel="icon" href="/img/logo.png?v=3" type="image/png">
-<link rel="stylesheet" href="/css/site.css?v=5">
+<link rel="stylesheet" href="/css/site.css?v=13">
 </head>
 <body>
 
@@ -49,14 +49,28 @@
           <span class="hero-rotate-item">Agenda e exames</span>
         </span>
       </div>
-      <svg class="ecg" viewBox="0 0 480 44" fill="none" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
-        <path d="M0 22 H130 L142 22 L152 7 L164 37 L174 14 L182 22 H290 L300 22 L308 12 L318 32 L326 22 H480"
-              stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
-      </svg>
+      <div class="ecg" aria-hidden="true">
+        <div class="ecg-draw">
+          <svg viewBox="0 0 1000 100" preserveAspectRatio="none">
+            <path class="ecg-halo" d="M0 54 L36 54 L46 47 L58 54 L92 54 L98 61 L108 10 L120 86 L132 54 L160 54 C178 54 188 32 210 32 C232 32 240 54 250 54 L292 54 L302 49 L314 54 L360 54 L366 60 L376 16 L388 80 L400 54 L430 54 C448 54 458 36 480 36 C502 36 510 54 530 54 L560 54 L570 46 L582 54 L610 54 L616 62 L626 8 L638 88 L650 54 L676 54 C694 54 704 30 726 30 C748 30 756 54 770 54 L812 54 L822 48 L834 54 L878 54 L884 60 L894 14 L906 82 L918 54 L944 54 C960 54 970 34 986 34 C994 34 998 46 1000 54"/>
+            <path class="ecg-core" d="M0 54 L36 54 L46 47 L58 54 L92 54 L98 61 L108 10 L120 86 L132 54 L160 54 C178 54 188 32 210 32 C232 32 240 54 250 54 L292 54 L302 49 L314 54 L360 54 L366 60 L376 16 L388 80 L400 54 L430 54 C448 54 458 36 480 36 C502 36 510 54 530 54 L560 54 L570 46 L582 54 L610 54 L616 62 L626 8 L638 88 L650 54 L676 54 C694 54 704 30 726 30 C748 30 756 54 770 54 L812 54 L822 48 L834 54 L878 54 L884 60 L894 14 L906 82 L918 54 L944 54 C960 54 970 34 986 34 C994 34 998 46 1000 54"/>
+          </svg>
+        </div>
+      </div>
       <div class="cta-row">
         <a class="cta" href="/o-app.html">Ver o que o app faz</a>
         <a class="cta-secondary" href="/suporte.html">Fale conosco</a>
       </div>
+      <div class="store-badges">
+              <a class="store-badge" href="https://apps.apple.com/br/app/envolv-health/id6787709091" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                <span><small>Baixar na</small><strong>App Store</strong></span>
+              </a>
+              <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.matthenrique.workspace&amp;hl=pt_BR" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 512 512" aria-hidden="true"><path fill="#4285F4" d="M325.3 234.3 104.6 13l280.8 161.2-60.1 60.1z"/><path fill="#34A853" d="M47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0z"/><path fill="#FBBC04" d="M425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8z"/><path fill="#EA4335" d="M104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/></svg>
+                <span><small>Disponível no</small><strong>Google Play</strong></span>
+              </a>
+            </div>
     </div>
   </section>
 
@@ -352,33 +366,19 @@
       <p class="eyebrow">Disponibilidade</p>
       <h2 id="stores-title">App Store e Google Play</h2>
       <p class="section-lead">O Envolv está disponível para iOS e Android. Dúvidas sobre cadastro, vínculo ou exclusão de conta: fale conosco por e-mail ou telefone.</p>
-      <div class="store-pills" aria-hidden="true">
-        <span class="store-pill is-on">iOS · App Store</span>
-        <span class="store-pill">Android · Google Play</span>
-      </div>
+      <div class="store-badges">
+              <a class="store-badge" href="https://apps.apple.com/br/app/envolv-health/id6787709091" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                <span><small>Baixar na</small><strong>App Store</strong></span>
+              </a>
+              <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.matthenrique.workspace&amp;hl=pt_BR" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 512 512" aria-hidden="true"><path fill="#4285F4" d="M325.3 234.3 104.6 13l280.8 161.2-60.1 60.1z"/><path fill="#34A853" d="M47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0z"/><path fill="#FBBC04" d="M425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8z"/><path fill="#EA4335" d="M104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/></svg>
+                <span><small>Disponível no</small><strong>Google Play</strong></span>
+              </a>
+            </div>
       <div class="cta-row">
         <a class="cta" href="/suporte.html">Fale conosco</a>
         <a class="cta-secondary" href="https://www.privacypolicies.com/live/5a5e5d6c-40be-46a4-ab0d-0eae4950a81a" target="_blank" rel="noopener noreferrer">Política de privacidade</a>
-      </div>
-    </div>
-    <div class="ticker" aria-hidden="true">
-      <div class="ticker-track">
-        <span>Prontuário clínico</span>
-        <span>Bioimpedância</span>
-        <span>Agenda</span>
-        <span>Exames</span>
-        <span>Equipes</span>
-        <span>Treino</span>
-        <span>Alimentação</span>
-        <span>Vínculo</span>
-        <span>Prontuário clínico</span>
-        <span>Bioimpedância</span>
-        <span>Agenda</span>
-        <span>Exames</span>
-        <span>Equipes</span>
-        <span>Treino</span>
-        <span>Alimentação</span>
-        <span>Vínculo</span>
       </div>
     </div>
   </section>
@@ -390,7 +390,7 @@
       <div>
         <h2>Envolv</h2>
         <p>ENVOLV DESENVOLVIMENTO DE SOFTWAR LTDA<br>CNPJ 68.533.687/0001-64</p>
-        <p style="margin-top:0.6rem">Rua Doutor Pedrosa, nº 320, apto. 403<br>Centro, Curitiba/PR, CEP 80.420-120</p>
+        <p style="margin-top:0.6rem">Rua Doutor Pedrosa, nº 320<br>Centro, Curitiba/PR, CEP 80.420-120</p>
       </div>
       <div>
         <h2>Navegação</h2>
@@ -404,7 +404,7 @@
       <div>
         <h2>Contato e dados</h2>
         <ul>
-          <li><a href="mailto:suportemain@envolvapp.com.br">suportemain@envolvapp.com.br</a></li>
+          <li><a href="mailto:envolvadmin@gmail.com">envolvadmin@gmail.com</a></li>
           <li><a href="tel:+5541997448143">(41) 99744-8143</a></li>
           <li><a href="/suporte.html">Contato</a></li>
           <li><a href="https://www.privacypolicies.com/live/5a5e5d6c-40be-46a4-ab0d-0eae4950a81a" target="_blank" rel="noopener noreferrer">Política de privacidade</a></li>
@@ -412,6 +412,16 @@
         </ul>
       </div>
     </div>
+    <div class="store-badges footer-stores">
+            <a class="store-badge" href="https://apps.apple.com/br/app/envolv-health/id6787709091" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+              <span><small>Baixar na</small><strong>App Store</strong></span>
+            </a>
+            <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.matthenrique.workspace&amp;hl=pt_BR" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 512 512" aria-hidden="true"><path fill="#4285F4" d="M325.3 234.3 104.6 13l280.8 161.2-60.1 60.1z"/><path fill="#34A853" d="M47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0z"/><path fill="#FBBC04" d="M425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8z"/><path fill="#EA4335" d="M104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/></svg>
+              <span><small>Disponível no</small><strong>Google Play</strong></span>
+            </a>
+          </div>
     <p class="fine">Envolv Health · Medicina do esporte · Curitiba/PR</p>
   </div>
 </footer>
